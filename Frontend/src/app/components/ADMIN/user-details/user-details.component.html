@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <mat-card>
+        <div class="user-heading">
+            <h1>User Details</h1>
+        </div>
+    </mat-card>
+    <br>
+    <mat-card *ngFor="let c of userData">
+        <div class="userBox">
+            <div>
+                <mat-form-field class="example-full-width box2" appearance="outline">
+                    <mat-label>Register ID</mat-label>
+                    <input [(ngModel)]="c.registerId" disabled matInput (value)="c.registerId">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width box2" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input [(ngModel)]="c.name" disabled matInput (value)="c.name">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width box2" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input [(ngModel)]="c.email" disabled matInput (value)="c.email">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width box2" appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input [(ngModel)]="c.phoneNumber" disabled matInput (value)="c.phoneNumber">
+                </mat-form-field>
+            </div>
+            <div class="slide-toggle">
+                <label *ngIf="isChecked==true">Active</label>
+                <label *ngIf="isChecked==false">Not Active</label>
+                <mat-slide-toggle (change)="updateValue(c.registerId)" [(ngModel)]="c.active"></mat-slide-toggle>
+                <!-- <mat-form-field class="example-full-width box2" appearance="outline">
+                    <mat-label>Active</mat-label>
+                    <input [(ngModel)]="c.active" disabled matInput (value)="c.active">
+                </mat-form-field> -->
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,37 @@
+<!-- {{UserData| json}} -->
+<div class="container">
+    <div class="register-image">
+        <img src="./../../../assets/images/login.png">
+    </div>
+    <div class="register-data">
+        <div class="register-heading">
+            <label>Login</label>
+            
+        </div>
+        <div class="register-user-data">
+            <form (ngSubmit)="formSubmitdata()">
+                <div class="register-email">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>E-mail</mat-label>
+                        <input name="email" [(ngModel)]="UserData.email" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="register-password">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input name="password" [(ngModel)]="UserData.password" matInput required>
+                        <mat-hint><h3 routerLink="/forget-password">Forget Password?</h3></mat-hint>
+                    </mat-form-field>
+                   
+                </div>
+                <br><br>
+                <div class="register-button">
+                    <button type="submit" mat-raised-button color="warn">Login</button>
+
+                </div>
+                 
+            </form>
+
+        </div>
+    </div>
+</div>

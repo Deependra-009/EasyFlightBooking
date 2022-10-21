@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <mat-card>
+        <div class="categories row">
+            <div class="labelbox col-2 ">
+                <label>Flight Category</label>
+            </div>
+            <div class="col-10">
+                <select (change)="categoryMethod()"   [(ngModel)]="category" class="form-select" aria-label="Default select example" required>
+                    <option  *ngFor="let c of Categories" [value]="c">{{c}}</option>
+    
+                </select>
+            </div>
+        </div>
+    </mat-card>
+    <br>
+    <mat-card  class="mat-result-card" *ngFor="let c of result">
+        <div class="resultCard">
+            <div class=" cardBox ">
+                <div>
+                    <img src={{c.image}}>
+                </div>
+                <label class="textBold">{{c.flightName}}</label>
+                <label class="custom-label">{{c.flightId}}</label>
+            </div>
+            <div class=" cardBox">
+                <div class="container text-center" style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.arrivalTime}}</h2>
+                    <label class="custom-label">{{c.arrival}}</label>
+                </div>
+            </div>
+            <div class=" cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <label class="h2">{{c.totalTime}}</label><br>
+                    <mat-icon class="iconsetting" mat-list-icon>flight</mat-icon><br>
+                    <label class="custom-label">{{c.flightType}}</label>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.destinationTime}}</h2>
+                    <label class="custom-label">{{c.destination}}</label>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="container text-center">
+                    <h2 class="price"><span>₹</span>{{c.amount}}</h2>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,95 @@
+.container{
+    display: flex;
+}
+.register-data{
+    width: 50%;
+    
+}
+.register-image{
+    width: 50;
+}
+.register-heading{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5%;
+}
+.register-user-data{
+    /* border: 2px solid black; */
+    width: 100%;
+    margin-top: 5%;
+    
+    
+}
+.example-full-width{
+    width: 100%;
+}
+.register-name,
+.register-email,
+.register-phone-number,
+.register-password,
+.register-confirm-password,
+.register-button
+{
+    width: 60%;
+    /* border: 2px solid black;     */
+}
+.register-button{
+    text-align: center;
+    padding: 10px;
+
+}
+.register-button button{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3px;
+    width: 50%;
+}
+.mat-form-field{
+    color: black;
+    font-size: 17px;
+}
+.register-image{
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.register-image img{
+    width: 100%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.forget-password{
+    /* border: 1px solid black; */
+    /* width: 70%; */
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+.forget-password:hover{
+    color: blue;
+    cursor: pointer;
+
+}
+.mat-hint{
+    color: black;
+    display: flex;
+    justify-content: right;
+    /* border: 3px solid black; */
+    width: 100%;
+}
+.mat-hint h3:hover{
+    color: blue;
+    cursor: pointer;
+}

@@ -1,0 +1,137 @@
+<div class="container-fluid">
+    <mat-card>
+        <div class="heading">
+            <h1>Add Flight Data</h1>
+        </div>
+        <hr>
+        <div class="admin-data mt">
+            <div class="data row">
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Arrival</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.arrival" id="firstname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Destination</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.destination" id="lastname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data row">
+                <div class="col-6 ">
+                    <div class="data-box flightname">
+                        <label class="key col-2">Flight Name</label>
+                        <!-- <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" 
+                                id="firstname" matInput>
+                        </mat-form-field> -->
+                        <select class="form-select"  [(ngModel)]="FlightData.flightName"
+                            aria-label="Default select example" required>
+                            <option value="" hidden disabled selected>Flight Name</option>
+                            <option *ngFor="let c of FlightName" [value]="c">{{c}}</option>
+
+                        </select>
+
+                        
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Flight ID</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.flightId" id="lastname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data row">
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Arrival Time</label>
+                        <select class="form-select time time-right" [(ngModel)]="Time.arrival.hour"
+                            aria-label="Default select example" required>
+                            <option value="" disabled selected hidden>HH</option>
+                            <option *ngFor="let c of Hours" [value]="c">{{c}}</option>
+
+                        </select>
+                        <select class="form-select time" [(ngModel)]="Time.arrival.minute"
+                            aria-label="Default select example" required>
+                            <option value="" disabled selected hidden>MM</option>
+                            <option *ngFor="let c of Minutes" [value]="c">{{c}}</option>
+
+                        </select>
+
+                    </div>
+                </div>  
+                <div class="col-6 time-box">
+                    <div class="data-box ">
+                        <label class="key col-2">Destination Time</label>
+                        <select class="form-select time time-right" [(ngModel)]="Time.detination.hour"
+                            aria-label="Default select example" required>
+                            <option value="" disabled selected hidden>HH</option>
+                            <option *ngFor="let c of Hours" [value]="c">{{c}}</option>
+
+                        </select>
+                        <select class="form-select time" [(ngModel)]="Time.detination.minute"
+                            aria-label="Default select example" required>
+                            <option value="" disabled selected hidden>MM</option>
+                            <option *ngFor="let c of Minutes" [value]="c">{{c}}</option>
+
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data row">
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Total Time</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user disabled-total-time" [(ngModel)]="FlightData.totalTime" id="firstname" matInput disabled>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Flight Type</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.flightType" id="lastname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data row">
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Amount</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.amount" id="firstname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="data-box">
+                        <label class="key col-2">Total Seat</label>
+                        <mat-form-field class="example-full-width col-6" appearance="outline">
+                            <input class="input-user" [(ngModel)]="FlightData.totalSeat" id="lastname" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+            <div class="add-data-button mt">
+                <button *ngIf="submit==true" (click)="addFlightData()" mat-raised-button color="primary">Add Data</button>
+                <button *ngIf="check==true" [ngStyle]="{'color':'black'}" (click)="checkData()" mat-raised-button color="warn">Check Data</button>
+            </div>
+        </div>
+    </mat-card>
+</div>

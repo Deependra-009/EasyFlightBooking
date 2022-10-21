@@ -1,0 +1,73 @@
+<div class="container">
+    <mat-card class="resultCard">
+        <div class="custom-select-noOfPer">
+            <div class="select-box">
+                <div>
+                    <label>Flight Name</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option *ngFor="let c of FlightName">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>Flight Type</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option *ngFor="let c of FlightType">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>Price</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option *ngFor="let c of FlightPrice">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card class="resultCard" *ngFor="let c of result">
+        <div class="row resultCard">
+            <div class="col-2 cardBox ">
+                <div>
+                    <img src={{c.image}}>
+                </div>
+                <label class="textBold">{{c.flightName}}</label>
+                <label class="custom-label">{{c.flightId}}</label>
+            </div>
+            <div class="col-2 cardBox">
+                <div class="container text-center" style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.arrivalTime}}</h2>
+                    <label class="custom-label">{{c.arrival}}</label>
+                </div>
+            </div>
+            <div class="col-2 cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <label class="h2">{{c.totalTime}}</label><br>
+                    <mat-icon class="iconsetting" mat-list-icon>flight</mat-icon><br>
+                    <label class="custom-label">{{c.flightType}}</label>
+                </div>
+            </div>
+            <div class="col-2 cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.destinationTime}}</h2>
+                    <label class="custom-label">{{c.destination}}</label>
+                </div>
+            </div>
+            <div class="col-2 cardBox">
+                <div class="container text-center">
+                    <h2 class="price"><span>₹</span>{{c.amount}}</h2>
+                </div>
+            </div>
+            <div class="col-2 cardBox">
+                <div class="container text-center">
+                    <button (click)="bookingFunction(c)" class="search-flight-button " mat-raised-button color="primary">Book</button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

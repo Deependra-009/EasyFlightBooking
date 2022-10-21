@@ -1,0 +1,57 @@
+.flight-custom-card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.detailsbox{
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+.user-custom-card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.flight-details{
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.border{
+    border: 2px solid black;
+}
+.data-box{
+    font-size: 18px;
+    /* border: 2px solid black; */
+    text-align: left;
+    margin-left: 20%;
+}
+.key{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.value{
+    font-weight: 400;
+}
+.mat-form-field{
+    
+    color: black;
+    width: 60%;
+}
+
+.submit-user-button{
+    width: 20%;
+}
+#price{
+    color: red;
+    font-size: 20px;
+}
+.input-user{
+    color: black;
+}

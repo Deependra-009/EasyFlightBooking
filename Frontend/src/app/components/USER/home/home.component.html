@@ -1,0 +1,102 @@
+<mat-card class="container mt-30 custom-card">
+    <div class="container">
+        <!-- {{SearchData|json}} -->
+        <div class="custom-select-toggle">
+            <label>One Way</label>
+            <mat-slide-toggle id="slideToggle" [checked]="toggleOn" (toggleChange)="enableReturnDate()">
+            </mat-slide-toggle>
+            <label>Round Trip</label>
+        </div>
+        <div class="custom-select">
+            <div class="select-box">
+                <div>
+                    <label>From</label>
+                    <select [(ngModel)]="SearchData.arrival" class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of From" [value]="c">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>To</label>
+                    <select [(ngModel)]="SearchData.destination" class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of To">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-select">
+            <div class="select-box">
+                <div>
+                    <label>Departure</label>
+                    <mat-form-field style="width:100%" appearance="outline">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [min]="minDate" [(ngModel)]="JourneyDate" [matDatepicker]="departurePicker"
+                            required>
+                        <mat-datepicker-toggle matSuffix [for]="departurePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #departurePicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>Return</label>
+                    <mat-form-field style="width:100%" appearance="outline">
+                        <mat-label>Choose a date</mat-label>
+                        <input [min]="minDate" #returnDate [(ngModel)]="SearchData.returnDate" matInput
+                            [matDatepicker]="returnPicker" [disabled]="this.returnDateValue" required>
+                        <mat-datepicker-toggle matSuffix [for]="returnPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #returnPicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="custom-select-noOfPer">
+            <div class="select-box">
+                <div>
+                    <label>Adults</label>
+                    <select [(ngModel)]="SearchData.noOfAdult" class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of Number">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>Children</label>
+                    <select [(ngModel)]="SearchData.noOfChildern" class="form-select"
+                        aria-label="Default select example" required>
+                        <option *ngFor="let c of childNumber">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label>Infants</label>
+                    <select [(ngModel)]="SearchData.noOfInfant" class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of childNumber">{{c}}</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="custom-select">
+            <div class="container text-center">
+                <button (click)="formSubmit()" class="search-flight-button" mat-raised-button color="primary">Search
+                    Flight</button>
+            </div>
+        </div>
+
+    </div>
+
+</mat-card>

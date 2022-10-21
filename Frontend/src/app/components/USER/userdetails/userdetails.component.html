@@ -1,0 +1,128 @@
+<div class="container detailsbox">
+    <mat-card class="mt-30 flight-custom-card">
+        <div class="flight-details">
+            <div class="heading">
+                <h1>Flight Details</h1>
+            </div>
+            <div class="data row">
+                <div class="col-6">
+                    <div class="data-box">
+                        <label class="key col-2">From</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input class="input-user" id="from" [(ngModel)]="flightData.arrival" matInput (value)="flightData.arrival" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">Arrival Time</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="arrivalTime" [(ngModel)]="flightData.arrivalTime" matInput (value)="flightData.arrivalTime" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">Flight Name</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="name" [(ngModel)]="flightData.flightName" matInput (value)="flightData.flightName" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">Date</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="date" [(ngModel)]="flightData.date" matInput (value)="flightData.date" disabled>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="data-box">
+                        <label class="key col-4">To</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="to" [(ngModel)]="flightData.destination" matInput (value)="flightData.destination" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">Departure Time</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="departTime" [(ngModel)]="flightData.destinationTime" matInput (value)="flightData.destinationTime" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">Flight Number</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="flightId" [(ngModel)]="flightData.flightId" matInput (value)="flightData.flightId" disabled>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">Price</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                             <input class="input-user" id="price" [(ngModel)]="flightData.amount" matInput (value)="flightData.amount" disabled>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card class="mt-30 user-custom-card">
+        <div class="flight-details">
+            <div class="heading">
+                <h1>User Details</h1>
+                <!-- {{userData|json}} -->
+            </div>
+            <div class="data row">
+                <div class="col-6">
+                    <div class="data-box">
+                        <label class="key col-2">First Name</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="firstname" [(ngModel)]="userData.firstName" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">Phone Number</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="phonenumber" [(ngModel)]="userData.phoneNumber" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">Street</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="street" [(ngModel)]="userData.street" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-2">State</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="state" [(ngModel)]="userData.state" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="data-box">
+                        <label class="key col-4">Last Name</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="lastname" [(ngModel)]="userData.lastname" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">E-mail</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="email" [(ngModel)]="userData.email" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">City</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="city" [(ngModel)]="userData.city" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="data-box">
+                        <label class="key col-4">Pin Code</label>
+                        <mat-form-field class="example-full-width col-2" appearance="outline">
+                            <input id="pincode" [(ngModel)]="userData.pinCode" class="input-user" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit-button">
+            <button (click)="formSubmit()" class="submit-user-button" mat-raised-button color="primary">Submit</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,55 @@
+<!-- {{UserData| json}} -->
+<div class="container">
+    <div class="register-data">
+        <div class="register-heading">
+            <label>Register</label>
+            
+        </div>
+        <div class="register-user-data">
+            <form (ngSubmit)="formSubmit()">
+                <div class="register-name">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input name="name" [(ngModel)]="UserData.name" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="register-email">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>E-mail</mat-label>
+                        <input name="email" [(ngModel)]="UserData.email" matInput required>
+                    </mat-form-field>
+
+                </div>
+                <div class="register-phone-number">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input name="email" [(ngModel)]="UserData.phoneNumber" matInput required>
+                    </mat-form-field>
+
+                </div>
+                <div class="register-password">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input name="password" [(ngModel)]="UserData.password" matInput required>
+                    </mat-form-field>
+
+                </div>
+                <div class="register-confirm-password">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input name="confirmPassword" [(ngModel)]="UserData.confirmPassword" matInput required>
+                    </mat-form-field>
+
+                </div>
+                <div class="register-button">
+                    <button mat-raised-button color="primary">Submit</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="register-image">
+        <img src="./../../../assets/images/register.png">
+    </div>
+</div>

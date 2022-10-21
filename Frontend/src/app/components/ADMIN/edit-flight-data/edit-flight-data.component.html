@@ -1,0 +1,91 @@
+<div class="container-flid">
+    <mat-card>
+        <div class="edit-data-heading">
+            <h1>Edit Flight Data</h1>
+        </div>
+        <hr>
+        <br>
+        <div class="edit-data-body">
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Arrival</mat-label>
+                        <input matInput [(ngModel)]="flightData.arrival" (value)="flightData.arrival">
+                    </mat-form-field>
+                </div>
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Destination</mat-label>
+                        <input matInput [(ngModel)]="flightData.destination" (value)="flightData.destination">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Arrival Time</mat-label>
+                        <input matInput [(ngModel)]="flightData.arrivalTime" (value)="flightData.arrivalTime">
+                    </mat-form-field>
+                </div>
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Destination Time</mat-label>
+                        <input matInput [(ngModel)]="flightData.destinationTime" (value)="flightData.destinationTime">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Flight Name</mat-label>
+                        <input matInput [(ngModel)]="flightData.flightName" (value)="flightData.flightName">
+                    </mat-form-field>
+                </div>
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Flight ID</mat-label>
+                        <input disabled matInput [(ngModel)]="flightData.flightId" (value)="flightData.flightId">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Flight Type</mat-label>
+                        <input matInput [(ngModel)]="flightData.flightType" (value)="flightData.flightType">
+                    </mat-form-field>
+                </div>
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Total Time</mat-label>
+                        <input disabled matInput [(ngModel)]="flightData.totalTime" (value)="flightData.totalTime">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Total Seat</mat-label>
+                        <input disabled matInput [(ngModel)]="flightData.totalSeat" (value)="flightData.totalSeat">
+                    </mat-form-field>
+                </div>
+                <div class="edit-data-box">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Amount</mat-label>
+                        <input matInput [(ngModel)]="flightData.amount" (value)="flightData.amount">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="edit-data">
+                <div class="edit-data-box">
+                    <button *ngIf="check==true" (click)="checkData()" mat-raised-button color="primary">Check</button>
+                    <button *ngIf="update==true" (click)="updateData()" mat-raised-button color="warn">Update</button>
+                </div>
+                <div class="edit-data-box">
+                    <button mat-raised-button color="basic">Reset</button>
+                </div>
+                <!-- <hr> -->
+            </div>
+        </div>
+    </mat-card>
+</div>

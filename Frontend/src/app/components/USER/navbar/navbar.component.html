@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-text  navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FlightBookKaro
+            <img class="flight-icon" src="./../../../assets/images/flight.png">
+        </a>
+
+        <div class="collapse navbar-collapse navbar-nav justify-content-center ">
+            <a [routerLink]="'/user'" class="nav-link active" aria-current="page">Home</a>
+            <a [routerLink]="'/user'" class="nav-link">Services</a>
+            <a [routerLink]="'/user/account-page'" class="nav-link" >Accounts</a>
+
+            
+        </div>
+        <div>
+            <a  *ngIf="loggedIn==false;else id" class="nav-link" [routerLink]="'/register-login-page'">Login/Register</a>
+            <ng-template #id>
+                <a (click)="logout()"  class="nav-link" [routerLink]="''">Logout</a>
+            </ng-template>
+        </div>
+    </div>
+</nav>

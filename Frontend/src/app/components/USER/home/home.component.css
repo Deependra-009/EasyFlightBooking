@@ -1,0 +1,73 @@
+.custom-select {
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.custom-card{
+    margin-top: 8%;
+    padding: 20px;
+    height: 50%;
+}
+
+.custom-select-noOfPer {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.select-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 3px solid black; */
+}
+
+.select-box div {
+
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.select-box label {
+    font-size: 15px;
+    margin-right: 20px;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+
+.form-select {
+    width: 100%;
+}
+
+
+
+.plus-minus button {
+    width: 40px;
+    border: 1px solid rgb(212, 207, 207);
+}
+.mat-raised-button{
+    margin-top: 20px;
+    background-color: red;
+    padding: 3px;
+    font-size: 20px;
+    width: 40%;
+}
+
+.custom-select-toggle{
+    /* border: 1px solid black; */
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+}
+.custom-select-toggle label{
+    font-size: 18px;
+}
+.mat-slide-toggle{
+    margin-left: 10px;
+    margin-right: 10px;
+}

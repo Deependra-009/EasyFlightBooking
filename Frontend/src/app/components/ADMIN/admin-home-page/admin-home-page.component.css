@@ -1,0 +1,57 @@
+
+.data-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-data-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.key{
+    font-size: 20px;
+}
+
+.add-data-button button{
+    width: 40%;
+    padding: 5px;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+.input-user{
+    font-size: 20px;
+}
+.mt{
+    margin-top: 5%;
+}
+.heading{
+    text-align: center;
+    
+}
+.heading h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.form-select{
+    width: 50%;
+    font-size: 20px;
+}
+.flightname{
+    padding-top: 10px;
+}
+.time{
+    width: 24.5%;
+   
+}
+.time-right{
+    margin-right: 10px;
+}
+.time-box{
+    margin-bottom: 20px;
+}
+
+.disabled-total-time{
+    color: black;
+}

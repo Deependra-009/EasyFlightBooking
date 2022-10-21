@@ -1,0 +1,97 @@
+.flight-custom-card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.data{
+    /* border:3px solid red; */
+}
+.heading{
+    text-align: center;
+}
+.data-booking{
+    width: 100%;
+    /* border: 3px solid black; */
+}
+.detailsbox{
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+.user-custom-card{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.flight-details{
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.border{
+    border: 2px solid black;
+}
+.data-box{
+    font-size: 18px;
+    /* border: 2px solid black; */
+    text-align: left;
+    margin-left: 20%;
+    /* width: 100%; */
+}
+.key{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.value{
+    font-weight: 400;
+}
+.input-user, .mat-form-field{
+    
+    color: black;
+    width: 100%;
+}
+
+.submit-user-button{
+    width: 20%;
+}
+#price{
+    color: red;
+    font-size: 20px;
+}  
+.box1{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.box1 input{
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    
+}
+.box2{
+    width: 100%;
+}
+
+.box3{
+    /* border: 2px solid black; */
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.box3 button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 15px;
+}
+

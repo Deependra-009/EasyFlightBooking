@@ -1,0 +1,30 @@
+.user-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+input:disabled{
+    color: black;
+    font-size: 20px;
+}
+.userBox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.slide-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mat-slide-toggle{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.slide-toggle label{
+    font-size: 20px;
+}
+.mat-slide-toggle:disabled{
+    color: red;
+}

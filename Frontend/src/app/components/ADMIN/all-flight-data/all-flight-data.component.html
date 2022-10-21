@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <mat-card>
+        <div class="flight-data-heading">
+            <h1>Search Flight Data</h1>
+        </div>
+        <hr><br>
+        <div class="flight-data-body">
+            <div class="flight-data-search">
+                <div class="flight-data-from">
+                    <label>From</label>
+                    <select [(ngModel)]="SearchData.arrival" class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of From" [value]="c">{{c}}</option>
+
+                    </select>
+                </div>
+                <div class="flight-data-to">
+                    <label>To</label>
+                    <select [(ngModel)]="SearchData.destination"  class="form-select" aria-label="Default select example"
+                        required>
+                        <option *ngFor="let c of To" [value]="c">{{c}}</option>
+
+                    </select>
+                </div>
+                <div class="flight-data-button">
+                    <button (click)="searchFlightData()" mat-raised-button color="primary">Search</button>
+                </div>
+            </div>
+            <br>
+            <hr>
+
+        </div>
+    </mat-card>
+    <br>
+    <mat-card *ngIf="dataFound==true">
+        <h1>No Flight Found!!</h1>
+    </mat-card>
+    <mat-card  class="mat-result-card" *ngFor="let c of result">
+        <div class="resultCard">
+            <div class=" cardBox ">
+                <div>
+                    <img src={{c.image}}>
+                </div>
+                <label class="textBold">{{c.flightName}}</label>
+                <label class="custom-label">{{c.flightId}}</label>
+            </div>
+            <div class=" cardBox">
+                <div class="container text-center" style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.arrivalTime}}</h2>
+                    <label class="custom-label">{{c.arrival}}</label>
+                </div>
+            </div>
+            <div class=" cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <label class="h2">{{c.totalTime}}</label><br>
+                    <mat-icon class="iconsetting" mat-list-icon>flight</mat-icon><br>
+                    <label class="custom-label">{{c.flightType}}</label>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="container text-center " style="margin-top: 10%;">
+                    <h2 class="textBold">{{c.destinationTime}}</h2>
+                    <label class="custom-label">{{c.destination}}</label>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="container text-center">
+                    <h2 class="price"><span>₹</span>{{c.amount}}</h2>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="container text-center button-box">
+                    <button (click)="editFlightData(c)" mat-raised-button color="basic">Edit</button>
+                    <button (click)="deleteFlightData(c.id)" mat-raised-button color="warn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+

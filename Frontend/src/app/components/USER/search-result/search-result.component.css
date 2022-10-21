@@ -1,0 +1,78 @@
+.resultCard{
+    margin-top: 40px;
+}
+.resultCard{
+    font-family: 'Times New Roman', Times, serif;
+}
+.cardBox{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    padding: 10px;
+}
+.cardBox img{
+    margin-left: 15px;
+    width: 40px;
+    height:40px;
+}
+.textBold{
+    font-size: 25px;
+    padding: 5px;
+}
+.mt-20{
+    margin-top: 50%;
+}
+.search-flight-button{
+    margin-top: 30%;
+    width: 100px;
+}
+.h2{
+    font-size: 20px;
+}
+.mat-icon{
+    transform: rotate(90deg);
+}
+.price{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-top: 45%;
+    color: red;
+}
+.custom-select-noOfPer {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.select-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 3px solid black; */
+}
+
+
+.select-box div {
+
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.select-box label {
+    font-size: 15px;
+    margin-right: 20px;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+
+.form-select {
+    width: 100%;
+}
+.custom-label{
+    font-size: 20px;
+}

@@ -1,0 +1,53 @@
+.flight-data-search{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.flight-data-from,.flight-data-to
+{
+    width: 30%;
+    /* border: 3px solid black; */
+}
+label{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.flight-data-button{
+    margin-top: 2%;
+    width: 30%;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+}
+.flight-data-button button{
+    width: 50%;
+}
+
+.resultCard{
+    display: flex;
+    justify-content: space-around;
+    /* border: 3px solid red; */
+}
+.cardBox{
+    width:50%;
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    
+
+}
+.mat-result-card{
+    margin-top: 1%;
+}
+.button-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-box button{
+    width:50%;
+    margin:5px;
+}

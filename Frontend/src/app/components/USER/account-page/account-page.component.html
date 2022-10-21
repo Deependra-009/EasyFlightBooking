@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-card *ngIf="data==true" class="mt-30">
+        <h1>No Data Found</h1>
+    </mat-card>
+    <mat-card class="mt-30" *ngFor="let c of AllBookingData">
+        <div class="resultPage">
+            <div class="account-input">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>PNR Number</mat-label>
+                    <input disabled matInput [(ngModel)]="c.pnr" (value)="c.pnr">
+                </mat-form-field>
+            </div>
+            <div class="account-input">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Refrence Number</mat-label>
+                    <input disabled matInput [(ngModel)]="c.bookingReferenceNumber" (value)="c.bookingReferenceNumber">
+                </mat-form-field>
+            </div>
+            <div class="account-input">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Transaction ID</mat-label>
+                    <input disabled matInput [(ngModel)]="c.transactionId" (value)="c.transactionId">
+                </mat-form-field>
+            </div>
+            <div class="account-input">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Amount</mat-label>
+                    <input disabled matInput [(ngModel)]="c.amount" (value)="c.amount">
+                </mat-form-field>
+            </div>
+            <div>
+                <button (click)="showDetails(c.bookingReferenceNumber)" [routerLink]="'/user/booking-details'" mat-raised-button color="warn">Click Here</button>
+            </div>
+        </div>
+    </mat-card>
+</div>
