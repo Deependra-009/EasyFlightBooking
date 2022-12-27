@@ -5,6 +5,7 @@
 
 <h4> * It is a Full Stack Project </h4>
 <h4> * It is a Flight Booking System where user can search flight result,book ticket and also cancel a ticket </h4>
+<h4> * In this project contain <i>ADMIN</i> and <i>USER</i> role.
 <h4> * In this project topics include:  </h4>
 <ul>
   <li>Spring Boot</li>
