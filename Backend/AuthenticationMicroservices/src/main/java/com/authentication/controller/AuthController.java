@@ -74,6 +74,7 @@ public class AuthController {
 		
 	}
 	
+
 	@PostMapping("/register")
 	public RegisterData register(@RequestBody RegisterData data) {
 		data.setAuthority("USER");
@@ -150,10 +151,7 @@ public class AuthController {
 	
 	@PostMapping("/forget-password")
 	public ResponseEntity<RegisterData> getForgetPasswordData(@RequestBody RegisterData data) throws Exception{
-		System.out.println("forget password");
-		System.out.println("---->"+data);
 		RegisterData userdata=this.registerService.getForgetPassword(data.getEmail());
-		System.out.println("=>"+userdata);
 		if(userdata==null) throw new Exception("User Not Found");
 		return new ResponseEntity<RegisterData>(userdata,HttpStatus.OK);
 	}
@@ -163,8 +161,6 @@ public class AuthController {
 		System.out.println("email"+email);
 		Random random=new Random();
 		int otp=random.nextInt(999999);
-		System.out.println("otp"+otp);
-		
 		registerService.setOTP(email, String.valueOf(otp));
 		
 		return new ResponseEntity<ForgetPasswordDTO>(new ForgetPasswordDTO(String.valueOf(otp), email),HttpStatus.OK);
