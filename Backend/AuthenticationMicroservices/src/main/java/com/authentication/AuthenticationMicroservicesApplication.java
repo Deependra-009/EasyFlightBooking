@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AuthenticationMicroservicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AuthenticationMicroservicesApplication.class, args);
+		SpringApplication.run(AuthenticationMicroservicesApplication.class);
 	}
 
 }

@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class AccountDataMicroservicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccountDataMicroservicesApplication.class, args);
+		SpringApplication.run(AccountDataMicroservicesApplication.class);
 	}
 
 }
