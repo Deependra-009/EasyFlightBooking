@@ -1,4 +1,4 @@
-<h2> Project:- &nbsp FlightBookKaro </h2>
+<h2> Project:- &nbsp EasyFlghtBooking </h2>
 <h4>Version: 1.0.1</h4>
 <hr>
 
